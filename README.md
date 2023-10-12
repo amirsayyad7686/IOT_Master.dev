@@ -11,16 +11,24 @@ This website is highly secure and lightning-fast. You'll appreciate it after jus
 Domain: iot-master.dev & iot-master.ir
 
 How to get started?
+
 Step 1 (Registration): Register for free on iot-master.dev. Afterward, you'll have access to your IoT dashboard.
+
 Step 2 (Set up a node): Define a node, such as your module (NodeMCU or ESP32), and enter your WiFi configuration, including SSID and password. Choose a name for your node.
+
 Step 3 (Set up components): Configure the components on your node, such as toggle buttons, push buttons, sensors, and sliders.
+
 Step 4 (Generate Code): Visit the component table page and click on the "Generate Code" button to obtain code for your selected node with all the components you set up earlier. It will be sent to your email. Your code includes three files: static.h, static.cpp, and IOT_Master.ino. These three files should remain together in a folder and be compiled together. The only necessary modification to the code is selecting your desired GPIO in:
 gpioMappings[component id don't change it] = [your GPIO];
+
 Also, use:
 pinMode([your GPIO], OUTPUT);
+
 And:
 sendSensorData([component id don't change it], [replace 'random' with your input sensor; it should be an int or float]);
+
 Now everything is ready; compile your code and enjoy it!
+
 I hope this helps. If you have any further questions or need additional assistance, please feel free to ask.
 
 
