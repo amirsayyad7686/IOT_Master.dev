@@ -10,19 +10,16 @@
             std::map<String, int> gpioMappings;
             //user config
             const char* ssid = <Wifi SSID>;
-            const char* pass = "24683579";
-            String USER_ID = "651d6d338c92523b5492e870";
-            String NODE_ID = "3f8a4083-3167-4573-962a-9ac63c6df535";
-            String NODE_NAME = "aasdasdasd";
+            const char* pass = <Wifi Pass>;
+            String USER_ID = <User Id>;
+            String NODE_ID = <Node Id>;
+            String NODE_NAME = <Node Name>;
 
             void setup() {
             Serial.begin(115200);
 
             //GPIO modify your gpio as you wish 
-                    gpioMappings["651d6e068c92523b5492e876"] = 1;// Toggle - component name : aaaaaaaaaaaaaaaaaa
-				gpioMappings["651d74088c92523b5492e91e"] = 2;// Toggle - component name : asdasdsadsad
-				gpioMappings["651d74228c92523b5492e927"] = 3;// Slider - component name : adssadsad
-				
+        	gpioMappings[<Component Id>] = <GPIO>;
 
                 for(uint8_t t = 4; t > 0; t--) {
                 Serial.printf("[SETUP] BOOT WAIT %d...", t);
