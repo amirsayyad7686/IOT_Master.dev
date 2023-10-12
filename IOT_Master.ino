@@ -9,7 +9,7 @@
             #include <map>
             std::map<String, int> gpioMappings;
             //user config
-            const char* ssid = "A34";
+            const char* ssid = <Wifi SSID>;
             const char* pass = "24683579";
             String USER_ID = "651d6d338c92523b5492e870";
             String NODE_ID = "3f8a4083-3167-4573-962a-9ac63c6df535";
