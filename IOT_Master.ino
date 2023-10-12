@@ -52,7 +52,7 @@
                 IOT_Master();//main iot master loop
                     if (now - sensor > 10000){//dont make it less than 10secs it may make your panel slower or getting limit rate exceeded!!!
                     sensor = now;
-                   sendSensorData(<component id>, <replace 'random' with your input sensor; it should be an int or float>);
+                   sendSensorData(<component id>, <replace 'random' with your input sensor; it should be an int>);
                 }
             //</iot-master>
 
