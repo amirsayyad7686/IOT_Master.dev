@@ -56,8 +56,8 @@ socketIO.loop();//main websocket loop
 
 IOT_Master();//main iot master loop
 
-[!WARNING]
-
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
 dont change sensor condition timer (if (now - sensor > 10000){}) it may make your panel  
 
 # Dashboard sample:
