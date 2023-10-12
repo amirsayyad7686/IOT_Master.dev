@@ -42,8 +42,7 @@ I hope this helps. If you have any further questions or need additional assistan
 
 for OUTPUT ,PWM or Digital
 
-`gpioMappings[<component id don't change it>] = {your gpio};
-`
+`gpioMappings[<component id don't change it>] = {your gpio};`
 for INPUT , Sensors or any type of int,float
 
 `sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);`
