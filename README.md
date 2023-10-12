@@ -38,7 +38,7 @@ Now everything is ready; compile your code and enjoy it!
 I hope this helps. If you have any further questions or need additional assistance, please feel free to ask.
 
 
-# Keywords:
+## Keywords:
 
 for OUTPUT ,PWM or Digital
 
@@ -55,7 +55,7 @@ for INPUT , Sensors or any type of int,float
 > [!WARNING]
 > dont change sensor condition timer (if (now - sensor > 10000){}) it may make your panel  
 
-# Dashboard sample:
+## Dashboard sample:
 
 <img width="1089" alt="Capture" src="https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/81011223-94d9-4387-ae72-c266af5d42c2">
 
