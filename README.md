@@ -1,26 +1,31 @@
 # IOT_Master.dev
 
 ![pngwing com(2)zxc](https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/1d2806a5-7e5e-4d71-9972-32f0bdffa96e)
+# IOT_Master.dev
 
-dynamic iot platform that i named it : IOT_Master 
-this platfrom has too many features for every junior developers for making their own plans and designs in iot and fulltime responsible with no limits , this platform designed open-source and has realtime actions.
-Every one can join with my iot masters colony and making their own palns with a responsible GUI and control their controllers (Esp modules , NodeMCU) with a code that i prepare for them just with one click and easy to setup and compile.
-This web site has really secure and fast just with one experience you will like it :) 
-im glad to having your feedback
+![pngwing com(2)zxc](https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/1d2806a5-7e5e-4d71-9972-32f0bdffa96e)
+This platform offers a wide range of features for junior developers to create their own plans and designs in IoT. It's a full-time responsibility with no limits, and it's designed to be open-source with real-time capabilities.
 
-domain : iot-master.dev & iot-master.ir
+Anyone can join my IoT Masters colony, create their plans with a user-friendly GUI, and control their controllers (such as ESP modules and NodeMCU) with code that I've prepared for them. Setting up and compiling is a breeze, requiring just one click.
 
-How to start ?
-Step 1 (Registration) : Please register for free in iot-master.dev after that you have iot dashboard and it accessible just for you 
-Step 2 (Setup a node) : Define a node that is your module like NodeMCU or esp32 ... and fill your WIFI config like ssid and password and choose a name for it 
-Step 3 (Setup components) : Setup your components on your node (Toggle button , Push button , Sensor , Slider)
-Step 4 (Generate Code) : Go to component table page and click on generate code button get code for your selected node with all components that you setuped before , it will send to your email , your codes containing 3 files with name static.h static.cpp and IOT_Master.ino these three file should stay together in a file and compile together just a modification is necessary for codes is select your desire gpio in 
-gpioMappings[component id dont change it] = [your gpio];
-and 
-pinMode([your gpio],OUTPUT);
-and
-sendSensorData([component id dont change it],[replace random with your input sensor it should be int or float]);
-now every things are ready compile your code and enjoy it
+This website is highly secure and lightning-fast. You'll appreciate it after just one experience! I'm eager to hear your feedback.
+
+Domain: iot-master.dev & iot-master.ir
+
+How to get started?
+Step 1 (Registration): Register for free on iot-master.dev. Afterward, you'll have access to your IoT dashboard.
+Step 2 (Set up a node): Define a node, such as your module (NodeMCU or ESP32), and enter your WiFi configuration, including SSID and password. Choose a name for your node.
+Step 3 (Set up components): Configure the components on your node, such as toggle buttons, push buttons, sensors, and sliders.
+Step 4 (Generate Code): Visit the component table page and click on the "Generate Code" button to obtain code for your selected node with all the components you set up earlier. It will be sent to your email. Your code includes three files: static.h, static.cpp, and IOT_Master.ino. These three files should remain together in a folder and be compiled together. The only necessary modification to the code is selecting your desired GPIO in:
+gpioMappings[component id don't change it] = [your GPIO];
+Also, use:
+pinMode([your GPIO], OUTPUT);
+And:
+sendSensorData([component id don't change it], [replace 'random' with your input sensor; it should be an int or float]);
+Now everything is ready; compile your code and enjoy it!
+I hope this helps. If you have any further questions or need additional assistance, please feel free to ask.
+
+
 
 
 
