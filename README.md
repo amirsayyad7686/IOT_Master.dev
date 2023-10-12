@@ -27,6 +27,7 @@ pinMode([your GPIO], OUTPUT);
 
 And:
 sendSensorData([component id don't change it], [replace 'random' with your input sensor; it should be an int or float]);
+https://iot-master.dev/iot-panel/component-table
 
 Now everything is ready; compile your code and enjoy it!
 
