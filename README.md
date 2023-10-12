@@ -39,7 +39,7 @@ I hope this helps. If you have any further questions or need additional assistan
 # Keywords:
 for OUTPUT ,PWM or Digital
 
-gpioMappings[<component id don't change it>] = <your GPIO>;
+gpioMappings[<component id don't change it>] = <GPIO>;
 
 for INPUT , Sensors or any type of int,float
 
