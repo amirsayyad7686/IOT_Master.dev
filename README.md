@@ -42,7 +42,9 @@ gpioMappings[<component id don't change it>] = <your GPIO>;
 
 for INPUT , Sensors or any type of int,float
 sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int or float>);
+
 also dont change these loop :
+
 socketIO.loop();//main websocket loop
 IOT_Master();//main iot master loop
 
