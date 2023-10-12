@@ -48,11 +48,15 @@ for INPUT , Sensors or any type of int,float
 
 sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);
 
+[!NOTE]
+
 also dont change these loop :
 
 socketIO.loop();//main websocket loop
 
 IOT_Master();//main iot master loop
+
+[!WARNING]
 
 dont change sensor condition timer (if (now - sensor > 10000){}) it may make your panel  
 
