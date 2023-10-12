@@ -7,8 +7,8 @@ This platform offers a wide range of features for junior developers to create th
 Anyone can join my IoT Masters colony, create their plans with a user-friendly GUI, and control their controllers (such as ESP modules and NodeMCU) with code that I've prepared for them. Setting up and compiling is a breeze, requiring just one click.
 
 This website is highly secure and lightning-fast. You'll appreciate it after just one experience! I'm eager to hear your feedback.
-
-Domain: iot-master.dev & iot-master.ir
+> [!NOTE]
+> Domain: iot-master.dev & iot-master.ir
 
 How to get started?
 
@@ -48,11 +48,9 @@ for INPUT , Sensors or any type of int,float
 
 sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);
 
-> [!NOTE]
+> [!IMPORTANT]
 > also dont change these loop :
-
 > socketIO.loop();//main websocket loop
-
 > IOT_Master();//main iot master loop
 
 > [!WARNING]
