@@ -28,7 +28,7 @@ Also, use:
 pinMode({your gpio}, OUTPUT);
 
 And:
-sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int or float>);
+sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);
 
 link:
 https://iot-master.dev/iot-panel/component-table
@@ -46,7 +46,7 @@ gpioMappings[<component id don't change it>] = {your gpio};
 
 for INPUT , Sensors or any type of int,float
 
-sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int or float>);
+sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);
 
 also dont change these loop :
 
