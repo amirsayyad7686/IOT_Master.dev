@@ -21,10 +21,10 @@ https://iot-master.dev/iot-panel/component-designer
 Step 3 (Set up components): Configure the components on your node, such as toggle buttons, push buttons, sensors, and sliders.
 
 Step 4 (Generate Code): Visit the component table page and click on the "Generate Code" button to obtain code for your selected node with all the components you set up earlier. It will be sent to your email. Your code includes three files: static.h, static.cpp, and IOT_Master.ino. These three files should remain together in a folder and be compiled together. The only necessary modification to the code is selecting your desired GPIO in:
-gpioMappings[<component id don't change it>] = <your GPIO>;
+gpioMappings[<component id don't change it>] = {your gpio};
 
 Also, use:
-pinMode(<your GPIO>, OUTPUT);
+pinMode({your gpio}, OUTPUT);
 
 And:
 sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int or float>);
@@ -39,7 +39,7 @@ I hope this helps. If you have any further questions or need additional assistan
 # Keywords:
 for OUTPUT ,PWM or Digital
 
-gpioMappings[<component id don't change it>] = <gpio>;
+gpioMappings[<component id don't change it>] = {your gpio};
 
 for INPUT , Sensors or any type of int,float
 
