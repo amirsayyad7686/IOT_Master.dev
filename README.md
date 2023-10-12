@@ -25,10 +25,10 @@ Step 4 (Generate Code): Visit the component table page and click on the "Generat
 `gpioMappings[<component id don't change it>] = {your gpio};`
 
 Also, use:
-pinMode({your gpio}, OUTPUT);
+`pinMode({your gpio}, OUTPUT);`
 
 And:
-sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);
+`sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);`
 
 link:
 https://iot-master.dev/iot-panel/component-table
@@ -42,16 +42,16 @@ I hope this helps. If you have any further questions or need additional assistan
 
 for OUTPUT ,PWM or Digital
 
-gpioMappings[<component id don't change it>] = {your gpio};
-
+`gpioMappings[<component id don't change it>] = {your gpio};
+`
 for INPUT , Sensors or any type of int,float
 
-sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);
+`sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);`
 
 > [!IMPORTANT]
 > also dont change these loop :
-> socketIO.loop();//main websocket loop
-> IOT_Master();//main iot master loop
+> `socketIO.loop();//main websocket loop`
+> `IOT_Master();//main iot master loop`
 
 > [!WARNING]
 > dont change sensor condition timer (if (now - sensor > 10000){}) it may make your panel  
