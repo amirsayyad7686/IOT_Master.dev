@@ -15,6 +15,7 @@ How to get started?
 Step 1 (Registration): Register for free on iot-master.dev. Afterward, you'll have access to your IoT dashboard.
 
 Step 2 (Set up a node): Define a node, such as your module (NodeMCU or ESP32), and enter your WiFi configuration, including SSID and password. Choose a name for your node.
+link:
 https://iot-master.dev/iot-panel/component-designer
 
 Step 3 (Set up components): Configure the components on your node, such as toggle buttons, push buttons, sensors, and sliders.
@@ -27,6 +28,7 @@ pinMode([your GPIO], OUTPUT);
 
 And:
 sendSensorData([component id don't change it], [replace 'random' with your input sensor; it should be an int or float]);
+link:
 https://iot-master.dev/iot-panel/component-table
 
 Now everything is ready; compile your code and enjoy it!
