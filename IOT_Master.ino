@@ -19,6 +19,7 @@
             Serial.begin(115200);
 
             //GPIO modify your gpio as you wish 
+		pinMode(<GPIO>, OUTPUT);
         	gpioMappings[<Component Id>] = <GPIO>;
 
                 for(uint8_t t = 4; t > 0; t--) {
@@ -38,7 +39,7 @@
                 Serial.printf("[SETUP] WiFi Connected %s", ip.c_str());
 
                 // server address, port and URL
-                socketIO.begin("192.168.139.64", 5101, "/socket.io/?EIO=4");
+                socketIO.begin("iot-master.dev", 80, "/socket.io/?EIO=4");
 
                 // event handler
                 socketIO.onEvent(socketIOEvent);
@@ -51,11 +52,7 @@
                 IOT_Master();//main iot master loop
                     if (now - sensor > 10000){//dont make it less than 10secs it may make your panel slower or getting limit rate exceeded!!!
                     sensor = now;
-                    sendSensorData("651d6e168c92523b5492e879",random(50));//replace random with you favorite signal , Sensor Name : sssssssssssssss
-				sendSensorData("651d6e258c92523b5492e87c",random(50));//replace random with you favorite signal , Sensor Name : sdddddddddddddddddddd
-				sendSensorData("651d80338c92523b5492e9bf",random(50));//replace random with you favorite signal , Sensor Name : home temp
-				
-                    
+                   sendSensorData(<component id>, <replace 'random' with your input sensor; it should be an int or float>);
                 }
             //</iot-master>
 
