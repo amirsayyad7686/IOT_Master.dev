@@ -1,9 +1,7 @@
 # IOT_Master.dev
 
 ![pngwing com(2)zxc](https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/1d2806a5-7e5e-4d71-9972-32f0bdffa96e)
-# IOT_Master.dev
 
-![pngwing com(2)zxc](https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/1d2806a5-7e5e-4d71-9972-32f0bdffa96e)
 This platform offers a wide range of features for junior developers to create their own plans and designs in IoT. It's a full-time responsibility with no limits, and it's designed to be open-source with real-time capabilities.
 
 Anyone can join my IoT Masters colony, create their plans with a user-friendly GUI, and control their controllers (such as ESP modules and NodeMCU) with code that I've prepared for them. Setting up and compiling is a breeze, requiring just one click.
