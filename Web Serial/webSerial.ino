@@ -18,9 +18,7 @@ String NODE_NAME = "NODENAME";
 String webSerialData = "";
 void setup() {
 Serial.begin(115200);
-
-//GPIO modify your gpio as you wish 
-//Set pinMode(<your pin>,OUTPUT) this for outputs , its necessary!
+pinMode(LED_BUILTIN,OUTPUT);
 
     for(uint8_t t = 4; t > 0; t--) {
     Serial.printf("[SETUP] BOOT WAIT %d...", t);
@@ -49,6 +47,13 @@ void loop() {
 //<iot-master>
 IOT_Master();//main iot master loop
 //</iot-master>
-
+    //this is a simple test for Web Serial API
+if(webSerialData == "ON"){
+    digitalWrite(LED_BUILTIN, HIGH);
+    webSerial("LED has turned on");
+}else if(webSerialData == "OFF"){
+  digitalWrite(LED_BUILTIN, LOW);  
+    webSerial("LED has turned off");
+}
 // your more codes goes here !! and be careful don't use delay on your code it has effect in your iot panel
 }
