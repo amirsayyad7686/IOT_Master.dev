@@ -48,8 +48,7 @@ for INPUT , Sensors or any type of int,float
 `sendSensorData(<component id don't change it>, <replace 'random' with your input sensor; it should be an int>);`
 
 > [!IMPORTANT]
-> also dont change these loop :
-> `socketIO.loop();//main websocket loop`
+> also dont change or delete this loop :
 > `IOT_Master();//main iot master loop`
 
 > [!WARNING]
