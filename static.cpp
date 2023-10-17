@@ -165,7 +165,6 @@ void sendSensorData(const char* componentId, int componentValue) {
   param["user_id"] = USER_ID;
   param["node_id"] = NODE_ID;
   createJsonMessage("message", param);
-
 }
 void startUp(){
    if(startUpTimer <= 1){
