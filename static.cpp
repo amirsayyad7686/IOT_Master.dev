@@ -185,6 +185,7 @@ void startUp(){
 }
 void IOT_Master() {
     uint64_t now1 = millis();
+    socketIO.loop();//main websocket loop
    if (now1 - connectRoom > 10000)
       {
           if(startUpTimer <= 1){
