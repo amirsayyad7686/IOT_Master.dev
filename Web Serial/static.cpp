@@ -187,7 +187,6 @@ void sendSensorData(const char* componentId, int componentValue) {
   param["user_id"] = USER_ID;
   param["node_id"] = NODE_ID;
   createJsonMessage("message", param);
-  Serial.printf("Sensor Data Has Sended To Server Value: %d\n", componentValue);
 }
 void startUp(){
    if(startUpTimer <= 1){
@@ -242,8 +241,4 @@ void IOT_Master() {
         // Clear the eventData variable
         eventData = "";
       }
-     
 }
-
-
-
