@@ -67,7 +67,7 @@ the variable from incoming data from web serial is `webSerialData` with as strin
 
 ![aa](https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/9318ce87-90d7-4b33-93d2-f3972f8ae22e)
 
-
+Also you can check web serial example 
 
 
 
