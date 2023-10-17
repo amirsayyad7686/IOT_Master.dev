@@ -58,6 +58,11 @@ for INPUT , Sensors or any type of int,float
 
 <img width="1089" alt="Capture" src="https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/81011223-94d9-4387-ae72-c266af5d42c2">
 
+## Web Serial API:
+
+new experiance with serial monitor with IOT_Master web serial API :
+
+the variable from incoming data from web serial is `webSerialData`
 
 
 
