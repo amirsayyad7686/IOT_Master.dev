@@ -56,7 +56,8 @@ for INPUT , Sensors or any type of int,float
 
 ## Dashboard sample:
 
-<img width="1089" alt="Capture" src="https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/81011223-94d9-4387-ae72-c266af5d42c2">
+![asd](https://github.com/amirsayyad7686/IOT_Master.dev/assets/78236642/b32050aa-171b-4e6a-b44b-0676ed642f2c)
+
 
 ## Web Serial API:
 
