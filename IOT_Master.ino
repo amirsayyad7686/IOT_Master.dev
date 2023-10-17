@@ -50,11 +50,11 @@ socketIO.onEvent(socketIOEvent);
 void loop() {
 //<iot-master>
 uint64_t now = millis();//dont change this timer it may make your panel slower or getting limit rate exceeded!!!
-socketIO.loop();//main websocket loop
 IOT_Master();//main iot master loop
     if (now - sensor > 10000){//dont make it less than 10secs it may make your panel slower or getting limit rate exceeded!!!
     sensor = now;
    sendSensorData(<component id>, <replace 'random' with your input sensor; it should be an int>);
+    Serial.printf("Sensor Data Has Sent To Server");
 }
 //</iot-master>
 
