@@ -52,7 +52,7 @@ for INPUT , Sensors or any type of int,float
 > `IOT_Master();//main iot master loop`
 
 > [!WARNING]
-> dont change sensor condition timer (if (now - sensor > 10000){}) it may make your panel  
+> dont change sensor condition timer (if (now - sensor > 10000){}) it may make your panel slower or disconnect 
 
 ## Dashboard sample:
 
