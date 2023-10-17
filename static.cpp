@@ -4,10 +4,13 @@
 #include <SocketIOclient.h>
 #include <ArduinoJson.h>
 SocketIOclient socketIO;
-unsigned long sensor = 0;
 unsigned long connectRoom = 0;
+unsigned long sensor = 0;
 int startUpTimer = 0;
 String eventData;
+
+
+
 
 void socketIOEvent(socketIOmessageType_t type, uint8_t * payload, size_t length) {
     switch(type) {
@@ -48,13 +51,20 @@ void createJsonMessage(const String& message,  const std::map<String, String>& p
     param[kv.first] = kv.second;
   }
 
-    String output;
-    serializeJson(doc, output);
-    socketIO.sendEVENT(output);
-    Serial.println(output);
-
+  String output;
+  serializeJson(doc, output);
+  socketIO.sendEVENT(output);
 }
-
+void webSerial(const String& message){
+  std::map<String, String> param;
+  param["node_id"]     = NODE_ID;
+  param["user_id"]     = USER_ID;
+  param["web_serial_data"]     = message;
+  param["status"]     = "WebSerial";
+  createJsonMessage("ESPrespond", param);
+  webSerialData = "";
+  return;
+}
 void controlGPIO(const char* componentId, int componentValue , const char* componentType) {
     // Check if the component_id exists in the map
   if(String(componentType) == "Toggle" || String(componentType) == "Button" || String(componentType) == "Slider"){
@@ -71,6 +81,7 @@ void controlGPIO(const char* componentId, int componentValue , const char* compo
                 param2["user_id"]     = USER_ID;
                 param2["status"]     = "OK";
                 createJsonMessage("ESPrespond", param2);
+                return ;
             } else if (componentValue == 0) {
                 // Turn the GPIO pin off (e.g., set it LOW)
                 digitalWrite(gpioPin, LOW);
@@ -80,18 +91,20 @@ void controlGPIO(const char* componentId, int componentValue , const char* compo
                 param3["user_id"]     = USER_ID;
                 param3["status"]     = "OK";
                 createJsonMessage("ESPrespond", param3);
+                return;
             } else {
                 Serial.println("Invalid component_value");
             }
         }
         if(String(componentType) == "Slider"){ 
             analogWrite(gpioPin, componentValue);
-            Serial.printf("Ranging ON GPIO %d\n Value : %d\n", gpioPin, componentValue);
+            Serial.printf("Ranging ON GPIO %d Value : %d\n", gpioPin, componentValue);
             std::map<String, String> param;
             param["componentId"]     = componentId;
             param["user_id"]     = USER_ID;
             param["status"]     = "OK";
             createJsonMessage("ESPrespond", param);
+            return ;
         }
     } else {
         Serial.println("Component ID not found in mappings please make sure that you have updated you codes!!!");
@@ -100,6 +113,7 @@ void controlGPIO(const char* componentId, int componentValue , const char* compo
         param2["user_id"]     = USER_ID;
         param2["status"]     = "ERROR";
         createJsonMessage("ESPrespond", param2);
+        return ;
     }
   }
 }
@@ -113,6 +127,7 @@ void restartProccess(const char* nodeId, const char* userId) {
         param2["user_id"]     = USER_ID;
         param2["status"]     = "Restart";
         createJsonMessage("ESPrespond", param2);
+        Serial.println("Restart Connection from server");
         delay(5000);
         ESP.restart();
     }
@@ -125,6 +140,7 @@ void checkConnectionProccess(const char* nodeId, const char* userId) {
         param2["user_id"]     = USER_ID;
         param2["status"]     = "Check";
         createJsonMessage("ESPrespond", param2);
+        Serial.println("Check Connection from server");
     }
 }
 
@@ -148,6 +164,12 @@ void processReceivedData(const JsonObject& jsonData) {
     }
     if(String(processType) == "check"){
       checkConnectionProccess(nodeId,userId);
+      return;
+    }
+      if(String(processType) == "webSerial"){
+      webSerialData = static_cast<String>(jsonData["web_serial_data"]);
+      Serial.print("From IOT_Master :");
+      Serial.println(webSerialData);
       return;
     }
     
@@ -184,8 +206,8 @@ void startUp(){
   }
 }
 void IOT_Master() {
+  socketIO.loop();//main websocket loop
     uint64_t now1 = millis();
-    socketIO.loop();//main websocket loop
    if (now1 - connectRoom > 10000)
       {
           if(startUpTimer <= 1){
@@ -195,6 +217,7 @@ void IOT_Master() {
           param1["nodeId"]     = NODE_ID;
           createJsonMessage("joinRoom", param1);
           startUp();
+          Serial.printf("Esp has joined to room %s ",USER_ID.c_str());
         }
       }
     
@@ -212,13 +235,10 @@ void IOT_Master() {
           const char* incomingNodeId = doc[1]["node_id"];
           if(String(incomingNodeId) == NODE_ID){
            processReceivedData(doc[1]);
+
           }
           }
         // Clear the eventData variable
         eventData = "";
       }
-     
 }
-
-
-
